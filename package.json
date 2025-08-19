@@ -39,11 +39,13 @@
   "size-limit": [
     {
       "path": "dist/my-component-library.cjs.production.min.js",
-      "limit": "10 KB"
+      "limit": "10 KB",
+      "preset": "@size-limit/preset-small-lib"
     },
     {
       "path": "dist/my-component-library.esm.js",
-      "limit": "10 KB"
+      "limit": "10 KB",
+      "preset": "@size-limit/preset-small-lib"
     }
   ],
   "devDependencies": {
