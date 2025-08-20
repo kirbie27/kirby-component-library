@@ -1,12 +1,16 @@
-import React from 'react';
+// src/KirbyButton.tsx
+import * as React from 'react';
 
-type ButtonProps = {
-  children: React.ReactNode;
-  onClick?: () => void;
-};
+import { Button } from '../components/ui/button';
 
-const KirbyButton: React.FC<ButtonProps> = ({ children, onClick }) => {
-  return <button onClick={onClick}>YE BOY {children}</button>;
+type KirbyButtonProps = React.ComponentProps<typeof Button>;
+
+const KirbyButton: React.FC<KirbyButtonProps> = ({ children, ...props }) => {
+  return (
+    <Button {...props} variant={'ghost'}>
+      YE BOY SHAD {children}
+    </Button>
+  );
 };
 
 export default KirbyButton;
